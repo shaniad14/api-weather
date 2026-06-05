@@ -122,5 +122,14 @@ search_button = tk.Button(
     command=search
 )
 
+search_button.pack(pady=10)
+
+result_label = tk.Label(
+    window,
+    text="Results will appear here",
+    justify="left",
+    font=("Arial", 11)
+)
+
 
 
