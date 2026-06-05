@@ -35,5 +35,10 @@ def get_country_info(country):
     capital = data['capital'][0]
     region = data['region']
 
+    currency_code = list(data['currencies'].keys())[0]
+
+    return population, capital, region, currency_code
+
+
 
 
