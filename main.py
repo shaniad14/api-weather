@@ -90,4 +90,25 @@ Currency: {currency}
             "Please enter a valid city and country."
         )
 
+# GUI
+
+
+window = tk.Tk()
+window.title("Country Information Dashboard")
+window.geometry("600x500")
+
+title = tk.Label(
+    window,
+    text="Country Information Dashboard",
+    font=("Arial", 16, "bold")
+)
+title.pack(pady=10)
+
+country_label = tk.Label(window, text="Enter Country:")
+country_label.pack()
+
+country_entry = tk.Entry(window, width=30)
+country_entry.pack()
+
+
 
