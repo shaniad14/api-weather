@@ -131,5 +131,9 @@ result_label = tk.Label(
     font=("Arial", 11)
 )
 
+result_label.pack(pady=20)
+
+window.mainloop()
+
 
 
