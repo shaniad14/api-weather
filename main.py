@@ -53,15 +53,15 @@ def get_exchange_rate(currency):
 
     return usd_rate
 
-# MAIN BUTTON FUNCTION
 
+# MAIN BUTTON FUNCTION
 
 def search():
 
     city = city_entry.get()
     country = country_entry.get()
 
-  try:
+    try:
 
         forecast, temp = get_weather(city)
 
@@ -69,7 +69,25 @@ def search():
 
         usd_rate = get_exchange_rate(currency)
 
+        results = f"""
+Weather Forecast: {forecast}
+Temperature: {temp}°C
 
+Country: {country}
+Capital: {capital}
+Region: {region}
+Population: {population:,}
 
+Currency: {currency}
+1 {currency} = {usd_rate:.2f} USD
+"""
+
+        result_label.config(text=results)
+
+    except Exception:
+        messagebox.showerror(
+            "Error",
+            "Please enter a valid city and country."
+        )
 
 
