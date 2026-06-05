@@ -53,5 +53,23 @@ def get_exchange_rate(currency):
 
     return usd_rate
 
+# MAIN BUTTON FUNCTION
+
+
+def search():
+
+    city = city_entry.get()
+    country = country_entry.get()
+
+  try:
+
+        forecast, temp = get_weather(city)
+
+        population, capital, region, currency = get_country_info(country)
+
+        usd_rate = get_exchange_rate(currency)
+
+
+
 
 
