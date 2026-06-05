@@ -22,5 +22,18 @@ def get_weather(city):
 
     return forecast, temp_c
 
+# COUNTRY API 
+
+def get_country_info(country):
+
+    url = f"https://restcountries.com/v3.1/name/{country}"
+
+    response = requests.get(url, timeout=10)
+    data = response.json()[0]
+
+    population = data['population']
+    capital = data['capital'][0]
+    region = data['region']
+
 
 
