@@ -110,5 +110,17 @@ country_label.pack()
 country_entry = tk.Entry(window, width=30)
 country_entry.pack()
 
+city_label = tk.Label(window, text="Enter City:")
+city_label.pack()
+
+city_entry = tk.Entry(window, width=30)
+city_entry.pack()
+
+search_button = tk.Button(
+    window,
+    text="Get Information",
+    command=search
+)
+
 
 
