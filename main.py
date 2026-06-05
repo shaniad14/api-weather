@@ -40,5 +40,18 @@ def get_country_info(country):
     return population, capital, region, currency_code
 
 
+# EXCHANGE RATE FUNCTION
+
+def get_exchange_rate(currency):
+
+    url = f"https://open.er-api.com/v6/latest/{currency}"
+
+    response = requests.get(url, timeout=10)
+    data = response.json()
+
+    usd_rate = data["rates"]["USD"]
+
+    return usd_rate
+
 
 
