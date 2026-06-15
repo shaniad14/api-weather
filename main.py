@@ -8,7 +8,7 @@ from tkinter import messagebox
 
 def get_weather(city):
 
-    API_KEY = "My api key for weather"
+    API_KEY = "8ad393c37366f52f26beba7263b3ef2c"
 
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}"
 
@@ -69,18 +69,14 @@ def search():
 
         usd_rate = get_exchange_rate(currency)
 
-        results = f"""
-Weather Forecast: {forecast}
-Temperature: {temp}°C
-
-Country: {country}
-Capital: {capital}
-Region: {region}
-Population: {population:,}
-
-Currency: {currency}
-1 {currency} = {usd_rate:.2f} USD
-"""
+        results = f"Weather Forecast: {forecast}" \
+f"\nTemperature: {temp}°C" \
+f"\nCountry: {country}" \
+f"\nCapital: {capital}" \
+f"\nRegion: {region}" \
+f"\nPopulation: {population:,}" \
+f"\nCurrency: {currency}" \
+f"\n1 {currency} = {usd_rate:.2f} USD"
 
         result_label.config(text=results)
 
